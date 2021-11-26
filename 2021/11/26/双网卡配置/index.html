@@ -13,16 +13,16 @@
 <meta property="og:site_name" content="Clover">
 <meta property="og:description" content="1.查看路由表配置 1route -n  2.配置 外网：ip192.168.1.140 网关192.168.1.1  内网：ip192.168.5.2.01 网关192.168.5.1  配置网卡1（外网：外网网卡要添加网关） 1vim &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-eno1   配置网卡2（内网：内网网卡不添加网关，DEDFROUTE只有连接外网的是">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="c:/Users/ljc/AppData/Roaming/Typora/typora-user-images/image-20211119111959849.png">
-<meta property="og:image" content="c:/Users/ljc/AppData/Roaming/Typora/typora-user-images/image-20211119112142510.png">
-<meta property="og:image" content="c:/Users/ljc/AppData/Roaming/Typora/typora-user-images/image-20211119112327556.png">
-<meta property="og:image" content="c:/Users/ljc/AppData/Roaming/Typora/typora-user-images/image-20211119112514002.png">
-<meta property="article:published_time" content="2021-11-26T12:10:51.894Z">
-<meta property="article:modified_time" content="2021-11-26T12:23:42.493Z">
+<meta property="og:image" content="http://test.imgurl.org/imgs/2021/11/443bbe46b41be26a.png">
+<meta property="og:image" content="http://test.imgurl.org/imgs/2021/11/75fe197ea6f83a0a.png">
+<meta property="og:image" content="http://test.imgurl.org/imgs/2021/11/e79234a5202b6ef5.png">
+<meta property="og:image" content="http://test.imgurl.org/imgs/2021/11/6882418c80582eda.png">
+<meta property="article:published_time" content="2021-11-26T13:12:42.000Z">
+<meta property="article:modified_time" content="2021-11-26T13:42:00.707Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:/Users/ljc/AppData/Roaming/Typora/typora-user-images/image-20211119111959849.png">
+<meta name="twitter:image" content="http://test.imgurl.org/imgs/2021/11/443bbe46b41be26a.png">
   
     <link rel="alternate" href="/atom.xml" title="Clover" type="application/atom+xml">
   
@@ -82,7 +82,7 @@
         <section id="main"><article id="post-双网卡配置" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/11/26/%E5%8F%8C%E7%BD%91%E5%8D%A1%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time class="dt-published" datetime="2021-11-26T12:10:51.894Z" itemprop="datePublished">2021-11-26</time>
+  <time class="dt-published" datetime="2021-11-26T13:12:42.000Z" itemprop="datePublished">2021-11-26</time>
 </a>
     
   </div>
@@ -110,11 +110,11 @@
 <p>配置网卡1（外网：<strong>外网网卡要添加网关</strong>）</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sysconfig/network-scripts/ifcfg-eno1</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\ljc\AppData\Roaming\Typora\typora-user-images\image-20211119111959849.png" alt="image-20211119111959849"></p>
+<p><img src="http://test.imgurl.org/imgs/2021/11/443bbe46b41be26a.png"></p>
 <p>配置网卡2（<strong>内网：内网网卡不添加网关，DEDFROUTE只有连接外网的是yes，内网为no</strong>）``</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sysconfig/network-scripts/ifcfg-enp4s0</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\ljc\AppData\Roaming\Typora\typora-user-images\image-20211119112142510.png" alt="image-20211119112142510"></p>
+<p><img src="http://test.imgurl.org/imgs/2021/11/75fe197ea6f83a0a.png"></p>
 <p><strong>重启网络服务</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service network restart</span><br></pre></td></tr></table></figure>
 
@@ -130,7 +130,7 @@
 <p><strong>添加两个路由表（路由表自定义名命名）</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/iproute2/rt_tables</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\ljc\AppData\Roaming\Typora\typora-user-images\image-20211119112327556.png" alt="image-20211119112327556"></p>
+<p><img src="http://test.imgurl.org/imgs/2021/11/e79234a5202b6ef5.png"></p>
 <p><strong>配置静态路由</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">ip route flush table ubains1</span><br><span class="line"></span><br><span class="line">ip route add default via 192.168.1.1 dev eno1 src 192.168.1.140 table ubains1</span><br><span class="line"></span><br><span class="line">ip route add 127.0.0.0/8 dev lo table ubains1</span><br><span class="line"></span><br><span class="line">ip rule add from 192.168.1.140 table ubains1</span><br><span class="line"></span><br><span class="line">ip route flush table ubains5</span><br><span class="line"></span><br><span class="line">ip route add default via 192.168.5.1 dev enp4s0 src 192.168.5.201 table ubains5</span><br><span class="line"></span><br><span class="line">ip route add 127.0.0.0/8 dev lo table ubains5</span><br><span class="line"></span><br><span class="line">ip rule add from 192.168.5.201 table ubains5</span><br></pre></td></tr></table></figure>
 
@@ -145,12 +145,12 @@
 <p>ip route add default via 192.168.5.1 dev enp4s0 src 192.168.5.201 table ubains5</p>
 <p>ip route add 127.0.0.0/8 dev lo table ubains5</p>
 <p>ip rule add from 192.168.5.201 table ubains5</p>
-<p><img src="C:\Users\ljc\AppData\Roaming\Typora\typora-user-images\image-20211119112514002.png" alt="image-20211119112514002"></p>
+<p><img src="http://test.imgurl.org/imgs/2021/11/6882418c80582eda.png"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/11/26/%E5%8F%8C%E7%BD%91%E5%8D%A1%E9%85%8D%E7%BD%AE/" data-id="ckwgcxmgi0000agvd26eua5cg" data-title="双网卡配置" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/11/26/%E5%8F%8C%E7%BD%91%E5%8D%A1%E9%85%8D%E7%BD%AE/" data-id="ckwgfpi320001t0vd5vje5top" data-title="双网卡配置" class="article-share-link">Share</a>
       
       
       
@@ -160,16 +160,6 @@
   </div>
   
     
-<nav id="article-nav">
-  
-  
-    <a href="/2021/11/25/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
-
   
 </article>
 
@@ -218,10 +208,6 @@
         
           <li>
             <a href="/2021/11/26/%E5%8F%8C%E7%BD%91%E5%8D%A1%E9%85%8D%E7%BD%AE/">双网卡配置</a>
-          </li>
-        
-          <li>
-            <a href="/2021/11/25/hello-world/">Hello World</a>
           </li>
         
       </ul>
